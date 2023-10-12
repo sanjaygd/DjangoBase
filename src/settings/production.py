@@ -1,7 +1,7 @@
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 
-import simple
+# import simple
 from .base import *
 
 # ==============================================================================
@@ -13,6 +13,7 @@ CSRF_COOKIE_HTTPONLY = True
 
 SECURE_HSTS_SECONDS = 60 * 60 * 24 * 7 * 52  # one year
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
 SECURE_SSL_REDIRECT = True
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
@@ -25,9 +26,9 @@ SESSION_COOKIE_SECURE = True
 # THIRD-PARTY APPS SETTINGS
 # ==============================================================================
 
-sentry_sdk.init(
-    dsn=config("SENTRY_DSN", default=""),
-    environment=SIMPLE_ENVIRONMENT,
-    release="simple@%s" % simple.__version__,
-    integrations=[DjangoIntegration()],
-)
+# sentry_sdk.init(
+#     dsn=config("SENTRY_DSN", default=""),
+#     environment=SIMPLE_ENVIRONMENT,
+#     release="simple@%s" % simple.__version__,
+#     integrations=[DjangoIntegration()],
+# )
