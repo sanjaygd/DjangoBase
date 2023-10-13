@@ -1,4 +1,8 @@
-# DRFBase
-This is the Base App for DRF provides minimum functionalities to run server and there is only djangorestframework installed and added to settings/base.py.
-It is having settings and requirements for dev, test, stage and production.
+# DRF
+This is the app with below features
+1. Custom user model
+2. DRF with JWT authentication (don't forget to add auth_medel in settings)
+3. Added api for listing users with admin-only permission for POC
+4. Having jwt login(account/token), register features.
+
 

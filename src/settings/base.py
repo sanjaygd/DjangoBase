@@ -5,8 +5,7 @@ from decouple import Csv, config
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config("SECRET_KEY", default="django-insecure$simple.settings.local")
@@ -27,10 +26,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # 3rd party app
     'rest_framework',
+    'rest_framework_simplejwt',
 
     # Developed app
-    'src.apps.core' #example how to add app when you changed app directory
+    'src.apps.core', #example how to add app when you changed app directory
+    'src.apps.accounts',
+
 ]
 
 MIDDLEWARE = [
@@ -76,8 +80,9 @@ DATABASES = {
 
 
 # Password validation
-# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
+
+AUTH_USER_MODEL = 'accounts.User' #changes the built-in user model to ours
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -138,3 +143,12 @@ MEDIA_ROOT = BASE_DIR.parent.parent / "media"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SIMPLE_ENVIRONMENT = config("SIMPLE_ENVIRONMENT", default="local")
+
+REST_FRAMEWORK = {
+    
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+    
+}
