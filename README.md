@@ -13,6 +13,9 @@ Follow bellow steps.
 11. Push the changes to remote [git push -u origin main]
 12. Create virtual environment in root directory(where manage.py and settings folder placed) [python -m venv venv]
 13. Intall dependencies [pip install -r .\requirements\base.txt]
+14. Add .env file in root directory.
+15. Run migrations [ python manage.py migrate]
+16. Create super user [python manage.py createsuperuser]
 
 This is the app with below features
 1. Custom user model
