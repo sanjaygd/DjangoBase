@@ -16,6 +16,10 @@ Follow bellow steps.
 14. Add .env file in root directory.
 15. Run migrations [ python manage.py migrate]
 16. Create super user [python manage.py createsuperuser]
+17. Run development server. [python manage.py runserver]
+18. Open postman run this post request with super user credential endpoint [http://127.0.0.1:8000/accounts/token/] you will get 200 status response with refresh token and access token
+19. Copy access token and open new tab in postman run this get request [http://127.0.0.1:8000/accounts/users/] with Autherization's bearer token as access token. it will list all the users.
+
 
 This is the app with below features
 1. Custom user model
