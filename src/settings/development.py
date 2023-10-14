@@ -32,8 +32,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
 
     # Developed app
-    'src.apps.core', #example how to add app when you changed app directory
     'src.apps.accounts',
+    'src.apps.expirement'
 
 ]
 

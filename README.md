@@ -20,6 +20,15 @@ Follow bellow steps.
 18. Open postman run this post request with super user credential endpoint [http://127.0.0.1:8000/accounts/token/] you will get 200 status response with refresh token and access token
 19. Copy access token and open new tab in postman run this get request [http://127.0.0.1:8000/accounts/users/] with Autherization's bearer token as access token. it will list all the users.
 
+<!-- Optional use case -->
+20. Changing environemnt - go to .env file and modify ENV attribute
+21. creating new App
+    1. Go to apps directory create folder in the name application
+    2. Run this command [python manage.py startapp expirement src/apps/expirement](python manage.py startapp <app_name> <distination_folder>)
+    3. Register app in setting's installed app
+    4. Go to apps.py of newly created app and change the name as 'src.apps.<app_name>'
+    5. Run development server.
+
 
 This is the app with below features
 1. Custom user model
