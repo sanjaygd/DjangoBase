@@ -11,6 +11,8 @@ Follow bellow steps.
 9. Commit all the changes [git commit -m "initial commit"]
 10. Create a relevent branch (here creating main branch since gitHub is having main branch by default) [git branch -M main]
 11. Push the changes to remote [git push -u origin main]
+12. Create virtual environment in root directory(where manage.py and settings folder placed) [python -m venv venv]
+13. Intall dependencies [pip install -r .\requirements\base.txt]
 
 This is the app with below features
 1. Custom user model
