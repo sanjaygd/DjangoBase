@@ -11,8 +11,8 @@ Follow bellow steps.
 9. Commit all the changes [git commit -m "initial commit"]
 10. Create a relevent branch (here creating main branch since gitHub is having main branch by default) [git branch -M main]
 11. Push the changes to remote [git push -u origin main]
-12. Create virtual environment in root directory(where manage.py and settings folder placed) [python -m venv venv]
-13. Intall dependencies [pip install -r .\requirements\base.txt]
+12. Create virtual environment and install dependencies [pipenv install](use --dev if need dev environment packeges along with prod packages)
+13. Activate virual environment [pipenv shell] and check proper interpreter is selected if not select manually.
 14. Add .env file in root directory.
 15. Run migrations [ python manage.py migrate]
 16. Create super user [python manage.py createsuperuser]
