@@ -33,7 +33,6 @@ INSTALLED_APPS = [
 
     # Developed app
     'src.apps.accounts',
-    'src.apps.expirement'
 
 ]
 

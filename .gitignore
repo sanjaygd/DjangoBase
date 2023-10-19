@@ -81,5 +81,5 @@ celerybeat.pid
 .python-version
 
 # pipenv
-Pipfile
-Pipfile.lock
+# Pipfile
+# Pipfile.lock
